@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to our website. We provide top-notch services in various domains. Learn more about us.">
+    <meta name="keywords" content="services, about us, portfolio, contact, responsive web design">
+    <title>Responsive SEO-Friendly Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .pageSize{
+            max-width: 1280px;
+            width: 100%;
+        }
+        header {
+            display: flex;
+            flex-direction: column;
+            background-color: #f4f4f4;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            margin: auto;
+        }
+        .logo img {
+            width: 60px;
+        }
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+        .social-icons img {
+            width: 24px;
+            height: auto;
+            cursor: pointer;
+            padding-right: 5px;
+        }
+        .social-icons>a:nth-child(1)>img {
+            height: 24px;
+        }
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            background-color: #333;
+        }
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        .menu ul li {
+            display: inline;
+        }
+        .menu ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 14px 20px;
+            display: block;
+        }
+        .menu ul li a:hover {
+            background-color: #575757;
+        }
+
+        .featured-image img{
+            width: 100%;
+            height: auto;
+        }
+        .featured-image{
+            height: 400px;
+            overflow: hidden;
+        }
+        .introduction {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px;
+        }
+      
+        .intro-text h2 {
+            /* font-size: 24px; */
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .intro-text p {
+            font-size: 16px;
+            line-height: 1.6;
+            /* text-align: center; */
+        }
+      
+        .work-we-do {
+            padding: 20px;
+            padding-top: 0px;
+            padding-bottom: 80px;
+        }
+        .work-we-do h2 {
+            /* padding-top: 14px; */
+            text-align: center;
+            /* font-size: 28px; */
+            margin-bottom: 20px;
+        }
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0px;
+        }
+        .work-item {
+            background-color: #f9f9f9;
+            text-align: center;
+            /* box-shadow: 0px 0px 8px #aecaff; */
+            border-radius: 0px;
+            border-right: 1px solid #ebebeb;
+            /* border-bottom: 1px solid #ccc; */
+        }
+        .work-item:nth-child(odd){
+            background-color: rgb(246 243 251);
+        }
+     
+        .work-item{
+            border-bottom: 1px solid #ebebeb;
+            }
+            .work-item:nth-child(n+7){
+            border-bottom: 0px solid transparent;
+            }
+       
+        .work-item a{
+            display: block;
+            text-decoration: none;
+            color: #333;
+            padding: 20px;
+        }
+        .work-item:hover{
+            /* border: 1px solid #cccccc; */
+            background-color: rgb(255, 249, 242);
+        }
+        .work-item h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .work-item p {
+            font-size: 14px;
+        }
+
+        /* Testimonial Section */
+        .testimonials {
+            padding: 40px;
+            background-color: #f9f9f9;
+        }
+        .testimonials h2 {
+            text-align: center;
+            /* font-size: 28px; */
+            margin-bottom: 20px;
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+        .testimonial-card {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        .testimonial-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        .testimonial-card p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+        .hamburger div {
+            width: 30px;
+            height: 3px;
+            background-color: #333;
+        }
+       
+        .connectMobile{
+            text-decoration: none;
+            color: #fff;
+        }
+
+
+        .user-form form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            max-width: 100%;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        input, select, button {
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .user-form button {
+            align-self: flex-end;
+            background-color: #4841c4;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px 17px;
+        }
+        .user-form h2{
+            margin-top: 0px;
+        }
+        button:hover {
+            background-color: #5249ef;
+        }
+           
+        main h2{
+            font-size: 27px;
+        }
+      .testimonials>.pageSize{
+        margin: auto;
+      }
+        /* Responsive Styles */
+        @media  (min-width:767px){
+            .intro-text {
+            flex: 1;
+            padding-left: 25px;
+            text-align: left;
+            }
+            .introduction{
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+            .testimonials{
+                padding-bottom: 100px;
+                padding-top: 60px;
+            }
+           
+            /* .end-user-form img {
+                display: block;
+                width: 400px;
+                height: 250px;
+                margin-right: 20px;
+                background-color: #ddd;
+            }  */
+            /* .logo{ */
+                /* padding-left: 110px; */
+            /* } */
+            /* .social-icons{padding-right: 110px;} */
+            .contactNum.second{
+                display: none;
+            }
+            .work-item:nth-child(3n+0){
+            border-right: 0px solid transparent;
+            }
+            .menu>div{
+                display: flex;
+                justify-content: space-between;
+                margin: auto;
+                align-items: center;
+            }
+            .connectMobile{
+                padding-right:15px;
+                padding-left: 5px;
+                border-right: 2px solid #fff;
+                font-size: 15px;
+                border-radius: 10px;
+            }
+            .user-form form{
+                padding-top: 40px;
+            }
+        }
+        @media (max-width: 768px) {
+            .intro-text h2{
+                padding-top: 42px;
+            }
+            .featured-image{
+                height: auto;
+            }
+           
+            .header-top { 
+                padding: 0px;
+                flex-wrap: wrap;
+                flex-direction: row;
+            }
+            .social-icons {
+                display: flex;
+                justify-content: center;
+                margin-top: 0px;
+                width: 100%;
+            }
+            .hamburger {
+                display: flex;
+                margin-right: 20px;
+            }
+            .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                position: absolute;
+            }
+            .menu>div{
+                display: flex;
+                flex-direction: column;
+            }
+          
+            .menu ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+          
+            .introduction {
+                flex-direction: column;
+                padding: 20px;
+            }
+            .intro-text {
+                order: 2;
+                padding-right: 0;
+                padding-top: 20px;
+                width: 100%;
+                padding-top: 0px;
+                text-align: center;
+            }
+            .user-form {
+                order: 1;
+                width: 100%;
+                text-align: left;
+            }
+            /* .end-user-form img {
+                width: 100%;
+            } */
+
+            .work-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .introduction{
+                padding-top: 60px;
+                padding-bottom: 0px;
+            }
+            .contactNum{
+                text-align: center;
+                display:none;
+            }
+            .contactNum a{
+                display: block;
+                padding: 5px 0px;
+                color: rgb(242, 100, 100);
+                font-weight: bold;
+            }
+            .second.contactNum{
+                display: block;
+            }
+            .testimonials{
+                padding-bottom: 80px;
+                padding-top: 30px;
+            }
+            .work-we-do{
+                padding-top: 30px;
+            }
+            .logo{
+                margin: 15px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .menu.active {
+            display: flex;
+        }
+        .middle-area{
+            margin: auto;
+            
+        }
+        footer{
+        text-align: center; padding: 20px; background-color: #333; color: white;
+    }
+    footer ul{
+        list-style: none; padding: 0; display: flex; justify-content: center; gap: 15px;
+    }
+    </style>
+</head>
+<body>
+
+<main>
+    <header>
+        <div class="header-top pageSize">
+            <a href="#" class="logo">
+                <img src="img/logo.png" alt="Website Logo">
+            </a>
+            <div class="contactNum second">
+                <a href="" class="connectMobile">+91-9650536016</a>
+                <a href="mailTo:">example@example.com</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><img src="img/fb.webp" alt="Facebook"></a>
+                <a href="#" aria-label="Twitter"><img src="img/tw.webp" alt="Twitter"></a>
+                <a href="#" aria-label="Instagram"><img src="img/instagram.jpg" alt="Instagram"></a>
+            </div>
+            
+        </div>
+    </header>
+
+    <nav class="menu" id="menu">
+        <div class="pageSize">
+            <div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="contactNum">
+                <a href="" class="connectMobile">+91-9650536016</a>
+                <a href="mailTo:" class="connectMobile">example@example.com</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="middle-area pageSize">
+        <section class="featured-image">
+            <img src="img/main-image.jpg" alt="Featured Image" />
+        </section>
+        <section class="introduction">
+            <div class="user-form">
+                <form action="#" method="POST">
+                    <h2>Book a call.</h2>
+                    <input type="text" name="name" placeholder="Enter your name" required>
+                    <input type="tel" name="phone" placeholder="Enter your phone number" required>
+                    <input type="email" name="email" placeholder="Enter your email" required>
+
+                    <select name="item" required>
+                        <option value="" disabled selected>Select an item</option>
+                        <option value="item1">Web Design</option>
+                        <option value="item2">Web development</option>
+                        <option value="item3">Backend development</option>
+                        <option value="item4">Other</option>
+                    </select>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="intro-text">
+                <h2>Welcome to Our Website</h2>
+                <p>We offer a range of services designed to help you achieve your goals.
+                     Whether it's web development, digital marketing, or graphic design, 
+                     our team is here to provide solutions tailored to your needs.
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur feugiat, urna non tincidunt dapibus, 
+                     nisl nunc congue leo, vitae suscipit sapien libero id elit. Aenean tincidunt tortor in felis dapibus, 
+                     non vehicula ligula malesuada. Nam viverra aliquet ligula. Integer sed nulla a nisl finibus fermentum. 
+                     Etiam nec ligula vitae enim interdum posuere. Fusce convallis metus a ipsum cursus, vel viverra libero placerat.
+                      Ut egestas auctor urna, non vulputate turpis convallis non. 
+                     Nullam quis tempor est. Cras venenatis nisl sit amet augue interdum, non tempus lacus
+                     <br/><br/>
+                     We offer a range of services designed to help you achieve your goals.
+                     Whether it's web development, digital marketing, or graphic design, 
+                     our team is here to provide solutions tailored to your needs.
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur feugiat, urna non tincidunt dapibus, 
+                     nisl nunc congue leo, vitae suscipit sapien libero id elit. 
+                </p>
+            </div>
+        </section>
+    
+        <section class="work-we-do">
+            <h2>Training We Provide.</h2>
+            <div class="work-grid">
+                <div class="work-item">
+                    <a href="#">
+                        <h3>Html</h3>
+                        <p>Description of service 1.</p>
+                    </a>
+                </div>
+                <div class="work-item">
+                    <a href="#">
+                        <h3>Css/Sass/Less</h3>
+                        <p>Description of service 2.</p>
+                    </a>
+                </div>
+                <div class="work-item">
+                    <a href="#">
+                        <h3>Javascript</h3>
+                        <p>Description of service 3.</p>
+                    </a>
+                </div>
+                <div class="work-item">
+                    <a href="#">
+                        <h3>Responsive Web Pages</h3>
+                        <p>Description of service 4.</p>
+                    </a>
+                </div>
+                <div class="work-item">
+                    <a href="#">
+                        <h3>React Js</h3>
+                        <p>Description of service 5.</p>
+                    </a>
+                </div>
+                <div class="work-item">
+                    <a href="#">
+                        <h3>Angular Js</h3>
+                        <p>Description of service 6.</p>
+                    </a>
+                </div>
+                <div class="work-item">
+                    <a href="#">
+                        <h3>Photoshop</h3>
+                        <p>Description of service 7.</p>
+                    </a>
+                </div>
+                <div class="work-item">
+                    <a href="#">
+                        <h3>PHP</h3>
+                        <p>Description of service 8.</p>
+                    </a>
+                </div>
+                <div class="work-item">
+                    <a href="#">
+                        <h3>SEO</h3>
+                        <p>Description of service 9.</p>
+                    </a>
+                </div>
+            </div>
+            
+        </section>
+    </section>
+    <section class="testimonials">
+        <div class="pageSize">
+            <h2>Testimonials</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <img src="testimonial1.jpg" alt="Client 1">
+                    <p>"The team provided exceptional service. They understood our needs and delivered beyond expectations."</p>
+                </div>
+                <div class="testimonial-card">
+                    <img src="testimonial2.jpg" alt="Client 2">
+                    <p>"Professional and dedicated. They took our project from concept to completion effortlessly."</p>
+                </div>
+                <div class="testimonial-card">
+                    <img src="testimonial3.jpg" alt="Client 3">
+                    <p>"Highly recommend their services! Their attention to detail and creativity is unmatched."</p>
+                </div>
+                <div class="testimonial-card">
+                    <img src="testimonial4.jpg" alt="Client 4">
+                    <p>"Amazing work! They provided innovative solutions that significantly improved our business."</p>
+                </div>
+                <div class="testimonial-card">
+                    <img src="testimonial5.jpg" alt="Client 5">
+                    <p>"Their communication and responsiveness made the entire process smooth and enjoyable."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+            <nav>
+                <ul>
+                    <li><a href="#" style="color: white; text-decoration: none;">Home</a></li>
+                    <li><a href="#" style="color: white; text-decoration: none;">About</a></li>
+                    <li><a href="#" style="color: white; text-decoration: none;">Services</a></li>
+                    <li><a href="#" style="color: white; text-decoration: none;">Portfolio</a></li>
+                    <li><a href="#" style="color: white; text-decoration: none;">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+  
+    
+</main>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+    
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>
