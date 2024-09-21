@@ -56,9 +56,10 @@ header {
     color: white;
     padding: 14px 20px;
     display: block;
+    white-space: nowrap;
 }
 .menu ul li a:hover {
-    background-color: #575757;
+    background-color: #111111;
 }
 
 /* sub menu css */
@@ -105,11 +106,9 @@ header {
     padding: 10px;
     display: block;
     text-decoration: none;
+    border-bottom: 1px solid #666666;
 }
 
-.submenu li a:hover {
-    background-color: #555;
-}
 
 /* Show the submenu when hovering over the parent menu item */
 .menu-item:hover .submenu {
@@ -161,10 +160,8 @@ header {
 .work-item {
     background-color: #f9f9f9;
     text-align: center;
-    /* box-shadow: 0px 0px 8px #aecaff; */
     border-radius: 0px;
     border-right: 1px solid #ebebeb;
-    /* border-bottom: 1px solid #ccc; */
 }
 .work-item:nth-child(odd){
     background-color: rgb(246 243 251);
@@ -184,7 +181,6 @@ header {
     padding: 20px;
 }
 .work-item:hover{
-    /* border: 1px solid #cccccc; */
     background-color: rgb(255, 249, 242);
 }
 .work-item h3 {
@@ -278,7 +274,7 @@ input, select, button {
     margin-bottom: 11px;
 }
 button:hover {
-    background-color: #555555;
+    background-color: #111111;
 }
    
 .testimonials>.pageSize{
@@ -306,18 +302,6 @@ margin: auto;
         padding-bottom: 100px;
         padding-top: 60px;
     }
-   
-    /* .end-user-form img {
-        display: block;
-        width: 400px;
-        height: 250px;
-        margin-right: 20px;
-        background-color: #ddd;
-    }  */
-    /* .logo{ */
-        /* padding-left: 110px; */
-    /* } */
-    /* .social-icons{padding-right: 110px;} */
     .contactNum.second{
         display: none;
     }
@@ -404,9 +388,6 @@ margin: auto;
         width: 100%;
         text-align: left;
     }
-    /* .end-user-form img {
-        width: 100%;
-    } */
 
     .work-grid {
         grid-template-columns: 1fr;
