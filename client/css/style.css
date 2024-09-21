@@ -182,7 +182,7 @@ header {
 .hamburger div {
     width: 30px;
     height: 3px;
-    background-color: #333;
+    background-color: #333333;
 }
 
 .connectMobile{
@@ -199,7 +199,7 @@ header {
     margin: auto;
     padding: 20px;
     border-radius: 10px;
-    background-color: #f9f9f9;
+    background-color: #333333;
 }
 
 input, select, button {
@@ -211,7 +211,7 @@ input, select, button {
 }
 .user-form button {
     align-self: flex-end;
-    background-color: #4841c4;
+    background-color: #0d00f6;
     color: white;
     border: none;
     cursor: pointer;
@@ -219,9 +219,10 @@ input, select, button {
 }
 .user-form h2{
     margin-top: 0px;
+    color:#ffffff;
 }
 button:hover {
-    background-color: #5249ef;
+    background-color: #2d22f6;
 }
    
 main h2{
@@ -232,6 +233,10 @@ margin: auto;
 }
 /* Responsive Styles */
 @media  (min-width:767px){
+    .user-form button {
+        align-self: auto;
+        width:100%;
+    }
     .intro-text {
     flex: 1;
     padding-left: 25px;
@@ -281,8 +286,8 @@ margin: auto;
     }
 }
 @media (max-width: 768px) {
-    .intro-text h2{
-        padding-top: 42px;
+    main .intro-text h2{
+        padding-top: 15px;
     }
     .featured-image{
         height: auto;
@@ -364,14 +369,15 @@ margin: auto;
         font-weight: bold;
     }
     .second.contactNum{
-        display: block;
+        display: block; 
     }
     .testimonials{
-        padding-bottom: 80px;
-        padding-top: 30px;
+        padding-bottom: 40px;
+        padding-top: 10px;
     }
     .work-we-do{
-        padding-top: 30px;
+        padding-top: 5px;
+        padding-bottom: 25px;
     }
     .logo{
         margin: 15px;
