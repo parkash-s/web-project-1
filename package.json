@@ -10,9 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-http": "^0.0.5"
+    "express": "^4.21.0",
+    "mustache": "^4.2.0",
+    "node-http": "^0.0.5",
+    "path": "^0.12.7"
   },
   "devDependencies": {
-    "nodemon": "^3.1.5"
+    "nodemon": "^3.1.7"
   }
 }

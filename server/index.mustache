@@ -1,0 +1,18 @@
+const express = require('express');
+const app = express();
+const path = require(path);
+const Mustache = require("mustache");
+const header = require("_header);
+
+
+
+
+const Mustache = require('mustache');
+
+const view = {
+  contact_number: "56215655223",
+  emailId: "abc.email.com"
+};
+
+const output = Mustache.render("header()", view);
+console.log(output);

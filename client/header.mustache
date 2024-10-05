@@ -1,12 +1,18 @@
-<header>
-        <div id="dataGot"></div>
+view = {
+    contact_number: 8562456852,
+    emailId: agc@email.com
+}
+
+const _header  = function escapeHtml{
+ <header>
+    <div id="dataGot"></div>
         <div class="header-top pageSize">
             <a href="#" class="logo">
                 <img src="img/logo.png" alt="Website Logo">
             </a>
             <div class="contactNum second">
-                <a href="" class="connectMobile">+91-9650536016</a>
-                <a href="mailTo:">example@example.com</a>
+                <a href="" class="connectMobile">{{contact_number}}</a>
+                <a href="mailTo:">{{emailId}}</a>
             </div>
             <div class="hamburger" id="hamburger">
                 <div></div>
@@ -20,5 +26,8 @@
                 <a href="#" aria-label="Instagram"><img src="img/instagram.jpg" alt="Instagram"></a>
             </div>
             
-        </div>
-    </header>
+    </div>
+</header>
+
+}
+export default _header;
