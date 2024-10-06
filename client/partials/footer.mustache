@@ -1,0 +1,41 @@
+const _footer = <footer>
+        <div>
+            <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+            <nav>
+                <ul>
+                    <li><a href="#" style="color: white; text-decoration: none;">Home</a></li>
+                    <li><a href="#" style="color: white; text-decoration: none;">About</a></li>
+                    <li><a href="#" style="color: white; text-decoration: none;">Services</a></li>
+                    <li><a href="#" style="color: white; text-decoration: none;">Portfolio</a></li>
+                    <li><a href="#" style="color: white; text-decoration: none;">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <div id="target">
+
+  </div>
+    
+</main>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+    
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+
+
+    function renderHello() {
+        let templatee = document.getElementById("#headerComponent").innerHTML;
+        let Rendered = Mustech.render(templatee, {name:'luke'});
+        document.getElementId("#target").innerHTML = Rendered;
+    }
+    renderHello();
+</script>
+
+</body>
+</html>
+
+export default _footer;
