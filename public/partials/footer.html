@@ -1,0 +1,45 @@
+<footer>
+    <div>
+        <p>&copy; {{copyright}}</p>
+        <nav>
+            <ul>
+                <li><a href="#" style="color: white; text-decoration: none;">{{menuBottom[0]}}</a></li>
+                <li><a href="#" style="color: white; text-decoration: none;">{{menuBottom[1]}}</a></li>
+                <li><a href="#" style="color: white; text-decoration: none;">{{menuBottom[2]}}</a></li>
+                <li><a href="#" style="color: white; text-decoration: none;">{{menuBottom[3]}}</a></li>
+                <li><a href="#" style="color: white; text-decoration: none;">{{menuBottom[4]}}</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+<div id="target">
+
+</div>
+
+</main>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const menu = document.getElementById('menu');
+
+hamburger.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
+
+
+function renderHello() {
+    let templatee = document.getElementById("#headerComponent").innerHTML;
+    let Rendered = Mustech.render(templatee, {name:'luke'});
+    document.getElementId("#target").innerHTML = Rendered;
+}
+renderHello();
+</script>
+<script src="https://github.com/janl/mustache.js/blob/master/mustache.js"></script>
+<script src="footerTemplateView.js"></script>
+<script src="footerTemplateData.js"></script>
+<script>
+    const footbody = Mustech.render("footerSample",details);
+    document.body = footbody;
+</script>
+</body>
+</html>

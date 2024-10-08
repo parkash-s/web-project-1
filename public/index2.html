@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to our website. We provide top-notch services in various domains. Learn more about us.">
+    <meta name="keywords" content="services, about us, portfolio, contact, responsive web design">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body>
+
+<main>
+    <header id="headerComponent">
+        <div id="dataGot"></div>
+        <div class="header-top pageSize">
+            <a href="{{logoPath.link}}" class="logo">
+                <img src="{{logoPath.image}}" alt="Website Logo">
+            </a>
+            <div class="contactNum second">
+                <a href="" class="connectMobile">connectMobile</a>
+                <a href="mailTo:">email</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <div class="social-icons">
+                {{#socialIconImage}}
+                <a href="{{socialIconImage.link}}" aria-label="{{socialIconImage.alable}}"><img src="{{socialIconImage.image}}" alt="{{socialIconImage.alable}}"></a>
+                {{/socialIconImage}}
+            </div>
+            
+        </div>
+    </header>
+
+    <nav class="menu" id="menu">
+        <div class="pageSize">
+            <div>
+                <ul class="menu-inner">
+                    {{#topMenu}}
+                    <li><a href="#">{{menu}}</a></li>
+                    {{/topMenu}}
+                    <li class="menu-item">
+                        <a href="#">Courses</a>
+                        <ul class="submenu">
+                            <li><a href="#">Web Development</a></li>
+                            <li><a href="#">Mobile App Development</a></li>
+                            <li><a href="#">SEO</a></li>
+                            <li><a href="#">Graphic Design</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="contactNum">
+                {{#personalDetails}}
+                <a href="" class="connectMobile">{{personalDetails.details}}</a>
+                {{/personalDetails}}
+            </div>
+        </div>
+    </nav>
+
+    <section class="middle-area pageSize">
+        <section class="featured-image">
+            <img src="{{mainTopImage}}" alt="Featured Image" />
+        </section>
+        <section class="introduction">
+            <div class="user-form">
+                <form action="#" method="POST">
+                    <h2>{{request}}</h2>
+                    <input type="text" name="name" placeholder="Enter your name" required>
+                    <input type="tel" name="phone" placeholder="Enter your phone number" required>
+                    <input type="email" name="email" placeholder="Enter your email" required>
+
+                    <select name="item" required>
+                        <option value="" disabled selected>Select an item</option>
+                        <option value="item1">Web Design</option>
+                        <option value="item2">Web development</option>
+                        <option value="item3">Backend development</option>
+                        <option value="item4">Other</option>
+                    </select>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="intro-text">
+                
+                <h2>{{welcomeMessage}}</h2>
+                <p>{{welcomeintro}}</p>
+            </div>
+        </section>
+    
+        <section class="work-we-do">
+            <h2>{{training.trainingHead}}</h2>
+            <div class="work-grid">
+                {{#training.courses}}
+                <div class="work-item">
+                    <a href="#">
+                        <h3>{{.}}</h3>
+                        <p>Description of service 1.</p>
+                    </a>
+                </div>
+                {{/training.Courses}}
+            </div>
+            
+        </section>
+    </section>
+    <section class="testimonials">
+        <div class="pageSize">
+            <h2>{{Testimonials.testimonialsHeadomg}}</h2>
+            <div class="testimonials-grid">
+                {{#Testimonials.clients}}
+                <div class="testimonial-card">
+                    <img src="" alt="Client 1">
+                    <p>{{client}}</p>
+                </div>
+                {{/Testimonials.client}}
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <p>&copy; {{copyright}}</p>
+            <nav>
+                <ul>
+                    {{#footerMenu}}
+                    <li><a href="#" style="color: white; text-decoration: none;">{{key}}</a></li>
+                    {{/footerMenu}}
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <div id="target">
+    
+    </div>
+    
+    </main>
+    
+    <script>
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+    
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+    
+    </script>
+    
+    <script>
+        const footbody = Mustech.render("footerSample",details);
+        document.body.innerHTML = footbody;
+    </script>
+    </body>
+    </html>
+    
+
+</body>
+</html>
