@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const Mustache = require('mustache');
 const port = 3000;
-const {output} = require('./client/_headerTop/');
+const output = require('./client/_headerTop/');
 // const homePageBlocks =  {
 //     Header: output,
 //     Body: outputBody,
@@ -13,8 +13,8 @@ const {output} = require('./client/_headerTop/');
 // {{homePageBlocks.Header}}
 // {{homePageBlocks.Body}}
 // {{homePageBlocks.Footer}}
-app.get('/',(re1,res,next)=>{
-    res.send(output);
+app.get('/client/_headerTop/',(re1,res)=>{
+
 })
   
 app.listen(port, () => {
