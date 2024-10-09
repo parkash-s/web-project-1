@@ -5,10 +5,13 @@ const port = 3000;
 const {textTemp} = require('./data/topLogoView');
 const  {templateFile} = require('./header');
 
-let output = null;
-app.use('/', (req, res) => {
-    output = mustache.render(templateFile, textTemp);
-    res.send(output);
-});
+async function getHeader(){
+    let output = null;
+     await app.use((req, res, next) => {
+       output = mustache.render(templateFile, textTemp); 
+    });
+    return output;
+}
+
   
 module.exports  = {output};

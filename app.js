@@ -4,7 +4,7 @@ const Mustache = require('mustache');
 const port = 3000;
 const output = require('./client/_headerTop/');
 // const homePageBlocks =  {
-//     Header: output,
+//     Header: outputHeader,
 //     Body: outputBody,
 //     Footer: outputFooter
 // }
@@ -13,10 +13,14 @@ const output = require('./client/_headerTop/');
 // {{homePageBlocks.Header}}
 // {{homePageBlocks.Body}}
 // {{homePageBlocks.Footer}}
-app.get('/client/_headerTop/',(re1,res)=>{
 
-})
   
-app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+app.get('/', (req, res) => {
+    res.send('hello...')
+  })
+
+
+app.listen(port, function(err) {
+if (err) console.log("Error in server setup");
+console.log("Server listening on Port", port);
 });
