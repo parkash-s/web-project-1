@@ -1,6 +1,4 @@
-let textTemp = `[
-    { 
-        "templateView" : {
+ let textTemp =  { 
         "lang" : "en",
         "charset" : "UTF-8",
         "metaContent" : "width=device-width,initial-scale=1",
@@ -10,39 +8,36 @@ let textTemp = `[
         "contentService":"services, about us, portfolio, contact, responsive web design",
         "nameKeywork":"keywords",
         "title" : "Learn Website Design | Learn Web Development | SEO | Other Specialized Courses" ,
-        "relName" : "stylesheet"
-        }
-    },
+        "relName" : "stylesheet" }
 
-    {
-        "logoPath": {
-            "image":"some path",
-            "link" : "some link"
-        }
-    },
-    {
-        "socialIconImage":[
-                { 
-                    "image":"link of image",
-                    "link": "redirectLink1",
-                    "lable": "facebook"
+    // {
+    //     "logoPath": {
+    //         "image":"some path",
+    //         "link" : "some link"
+    //     }
+    // },
+    // {
+    //     "socialIconImage":[
+    //             { 
+    //                 "image":"link of image",
+    //                 "link": "redirectLink1",
+    //                 "lable": "facebook"
                     
-                },
-                { 
-                    "image":"link of image",
-                    "link": "redirectLink2",
-                    "lable": "twitter"
+    //             },
+    //             { 
+    //                 "image":"link of image",
+    //                 "link": "redirectLink2",
+    //                 "lable": "twitter"
                     
-                },
-                { 
-                    "image":"link of image",
-                    "link": "redirectLink3",
-                    "lable": "instagram"
+    //             },
+    //             { 
+    //                 "image":"link of image",
+    //                 "link": "redirectLink3",
+    //                 "lable": "instagram"
                     
-                }
-            ]
+    //             }
+    //         ]
+    //  }
 
-    }
-]`
 
 module.exports = {textTemp}

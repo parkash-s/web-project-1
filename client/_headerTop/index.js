@@ -2,16 +2,14 @@ const express = require("express");
 const app = express();
 const mustache = require('mustache');
 const port = 3000;
-const {textTemp} = require('./data/topLogoView');
-const  {templateFile} = require('./header');
+// const {textTemp} = require('./data/topLogoView');
+// const  {templateFile} = require('./header');
 
-async function getHeader(){
-    let output = null;
-     await app.use((req, res, next) => {
-       output = mustache.render(templateFile, textTemp); 
-    });
-    return output;
-}
+app.use((req, res, next)=>{
+   let output = mustache.render(templateFile, textTemp); 
+    console.log("02");
+    next();
+});
 
   
-module.exports  = {output};
+// module.exports  = {output};
