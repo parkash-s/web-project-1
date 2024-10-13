@@ -34,43 +34,35 @@ let mainViewTempObj =  {
                         }
                    ],
 
-        "topMenu" :   [
-                            {
-                                "menu": "home",
-                                "submenu": false,
-                                'class': null
-                            },
-                            {
-                                "menu": "About",
-                                "submenu": false,
-                                'class': null
-                            },
-                            {  
-                            "submenuItems":{ 
-                                'menu' : 'courses',
-                                'submenu':true, 
-                                'class': 'menu-item',
-                                "submenuItemsInner     " : [
-                                            { "name": "web design" },
-                                            { "name": "web development" },
-                                            { "name": "Seo" },
-                                            {"name":"others"}
-                                        ],    
-                                }
-                               
-                            },
-                            
-                            {
-                                "menu": "Portfolio",
-                                "submenu": false,
-                                'class': null
-                            },
-                            {
-                                "menu": "Contact",
-                                "submenu": false,
-                                'class': null
-                            },
-                    ], 
+        "topMenu" :  { submenu0: [
+                                    {
+                                        "menu": "home",
+                                        "submenu": false,
+                                        'class': null
+                                    },
+                                    {
+                                        "menu": "About",
+                                        "submenu": false,
+                                        'class': null
+                                    },
+                                    
+                                    { 
+                                        'menu' :   'courses',
+                                        'submenu': "<ul class='submenu'><li><a href-''></a></li><li><a href-''></a></li><li><a href-''></a></li><li><a href-''></a></li></ul>",
+                                        'class': 'menu-item',   
+                                    },
+                                    
+                                    {
+                                        "menu": "Portfolio",
+                                        "submenu": false,
+                                        'class': null
+                                    },
+                                    {
+                                        "menu": "Contact",
+                                        "submenu": false,
+                                        'class': null
+                                    },
+                        ]}
                             
                             
                            

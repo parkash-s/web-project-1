@@ -41,26 +41,19 @@ const mainViewTemplate =
              </div>
          </header>
 
-
-
-
         <nav class="menu" id="menu">
             <div class="pageSize">
                 <div>
                     <ul class="menu-inner">
-                        {{#topMenu}}
-                            <li><a href="#">{{menu}}</a></li>
-                            {{#submenuItems.submenu}}   
-                                  <li class={{class}}>
-                                     <a href="#">{{menu}}</a>
-                                     <ul class='submenu'>
-                                     {{#submenuItemsInner}}
-                                         <li><a href="#">{{name}}</a></li>
-                                     {{/submenuItemsInner}}
-                                     </ul>
-                                 </li> 
-                            {{/submenuItems.submenu}}        
-                        {{/topMenu}}
+                        {{#topMenu.submenu0}}  
+                                <li class='{{class}}'>
+                                  <a href="#">{{menu}}</a>
+                                  {{}}
+                                    {{submenu}}
+                                  {{}}
+                                </li>
+                        {{/topMenu.submenu0}}
+                        
                     </ul>
                 </div>
                 <div class="contactNum">
@@ -69,7 +62,6 @@ const mainViewTemplate =
                 </div>
             </div>
         </nav>
-
 
         <footer>
         <div>
