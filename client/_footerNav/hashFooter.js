@@ -1,39 +1,17 @@
 const express =  require('express');
 const path = require("path");
-
-let footerHash = {
-
-     footerNav : [
-                       {
-                           "menu": "home"
-                       },
-                       {
-                           "menu": "About"
-                       },
-                       {
-                           "submenuItem": "Course",
-                           "subMenuItems":["web development", "mobile App Development", "SEO" , "graphic Design"]
-                       },
-                       {
-                           "menu": "Portfolio"
-                       },
-                       {
-                           "menu": "Contact"
-                       },
-                       {
-                           "menu": "web development"
-                       },
-                       {
-                           "menu": "mobile App Development"
-                       },
-                       {
-                           "menu": "SEO"
-                       },
-                       {
-                           "menu": "graphic Design"
-                       }
+const Mustache = require('mustache');
+console.log("inside from footer hash object!")
+let footerHash = [
+                    {
+                        "menu": "home"
+                    },
+                    {
+                        "menu": "About"
+                    },
+                    
                 ]    
 
-            }
+            
 
 module.exports = {footerHash}

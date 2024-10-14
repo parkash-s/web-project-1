@@ -1,16 +1,10 @@
 const Mustache = require('mustache');
-
-const footerNavHtml = `<footer>
-        <div>
-            <p>&copy; {{copyright}}</p>
-            <nav>
-                <ul>
-                     {{#topMenu}}
-                    <li><a href="#" style="color: white; text-decoration: none;">{{menu}}</a></li>
-                    {{/topMenu}}
-                </ul>
-            </nav>
-        </div>
-    </footer>`
+console.log("inside footer html!");
+const footerNavHtml = `<ul>
+                        {{#footerHash}}
+                        <li><a href="#">{{menu}}</a></li>
+                        {{/footerHash}}
+                      </ul>`
+            
     
-module.exports = footerNavHtml;
+module.exports = {footerNavHtml};
